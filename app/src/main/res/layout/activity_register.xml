@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/signup_bg"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:id="@+id/register_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:padding="40dp">
+
+        <TextView
+            android:id="@+id/info_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Hello"
+            android:gravity="center"
+            android:visibility="visible"
+            android:textColor="#223C00"
+            android:layout_marginBottom="10dp"
+            android:textStyle="italic"/>
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:met_floatingLabel="normal"
+            android:inputType="text|textAutoComplete"
+            android:textColor="@android:color/white"
+            android:hint="@string/prompt_username"
+            android:textColorHint="@android:color/white"
+            android:importantForAutofill="no" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="10dp"
+            app:met_floatingLabel="normal"
+            android:textColor="@android:color/white"
+            android:hint="@string/prompt_email"
+            android:textColorHint="@android:color/white"
+            android:importantForAutofill="no" />
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/white"
+            app:met_floatingLabel="normal"
+            android:textColorHint="@android:color/white"
+            android:hint="@string/prompt_password"
+            android:importantForAutofill="no" />
+        <EditText
+            android:id="@+id/password2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:layout_marginTop="10dp"
+            app:met_floatingLabel="normal"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:hint="@string/prompt_password_2"
+            android:importantForAutofill="no" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/oval_shape"
+        android:layout_below="@id/register_layout"
+        android:textColor="#FFF"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="@string/action_register"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account?"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_alignTop="@id/login_btn"
+        android:layout_alignBottom="@id/login_btn"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@id/login_btn"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/oval_shape"
+        android:textColor="#FFF"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="@string/action_sign_in"/>
+
+</RelativeLayout>

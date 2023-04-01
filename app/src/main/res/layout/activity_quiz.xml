@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/st_quiz_bg"
+    tools:context=".QuizActivity">
+
+    <LinearLayout
+        android:id="@+id/timer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="2"
+        android:background="@drawable/oval_shape_white"
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            tools:text="40"
+            android:layout_weight="1"
+            android:background="@drawable/oval_shape"
+            android:textStyle="bold|italic"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:layout_weight="1">
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_action_timer" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_below="@+id/timer_layout"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="3dp"
+        android:gravity="center"
+        tools:text="Sound Waves" />
+
+    <TextView
+        android:id="@+id/answered_questions"
+        android:layout_width="68dp"
+        android:layout_height="31dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_alignBottom="@+id/title"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        tools:text="2/10" />
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:src="@drawable/dotted"
+        android:layout_below="@+id/title"
+        android:layerType="software"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                tools:text="What is an activity?"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            <LinearLayout
+                android:id="@+id/option1Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:onClick="clickedOption"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/question">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center_vertical"
+                    android:text="a."/>
+                <TextView
+                    android:id="@+id/optionText1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/white"
+                    android:layout_weight="1"
+                    tools:text="This is question 1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/option2Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/option1Layout"
+                android:onClick="clickedOption">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:text="b."/>
+                <TextView
+                    android:id="@+id/optionText2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/white"
+                    tools:text="This is question 2"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/option3Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/option2Layout"
+                android:onClick="clickedOption">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center_vertical"
+                    android:text="c."/>
+                <TextView
+                    android:id="@+id/optionText3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/white"
+                    tools:text="This is question 3"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/option4Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/option3Layout"
+                android:onClick="clickedOption">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:text="d."/>
+                <TextView
+                    android:id="@+id/optionText4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/white"
+                    android:layout_weight="1"
+                    tools:text="This is question 4"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/option4Layout"
+                android:textColor="@android:color/white"
+                android:background="@drawable/oval_shape"
+                android:textStyle="bold"
+                android:text="@string/confirm"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

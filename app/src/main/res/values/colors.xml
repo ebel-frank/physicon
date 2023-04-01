@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00704D</color>
+    <color name="colorAccent">#008015</color>
+
+    <color name="lineColor">@android:color/darker_gray</color>
+    <color name="background_grey">#D3D3D3</color>
+    <color name="navy">#00008B</color>
+    <color name="dark_cyan">#008B8B</color>
+    <color name="sienna">#A0522D</color>
+    <color name="chocolate">#F4A460</color>
+    <color name="dark_turquoise">#00CED1</color>
+</resources>

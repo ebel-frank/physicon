@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "144285720479",
+    "firebase_url": "https://learnphysics-8fc75.firebaseio.com",
+    "project_id": "learnphysics-8fc75",
+    "storage_bucket": "learnphysics-8fc75.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144285720479:android:2ced88c38460bbeed527aa",
+        "android_client_info": {
+          "package_name": "com.ebel_frank.learnphysics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144285720479-nc2680o40tr15hlv1j8qef6p6jli28f2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ebel_frank.learnphysics",
+            "certificate_hash": "bef69069eb745b8a377c10d7f4cf75befb2de2f9"
+          }
+        },
+        {
+          "client_id": "144285720479-0sd6em4rmm2hf6eqf13j4or2tsn8lvk1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-CQL45xBZe32Ewtot9i--lWH-5vBWUDI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144285720479-0sd6em4rmm2hf6eqf13j4or2tsn8lvk1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

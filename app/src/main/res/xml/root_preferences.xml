@@ -1,0 +1,19 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:iconSpaceReserved="false">
+
+    <Preference
+        app:key="reference"
+        app:title="References"
+        app:iconSpaceReserved="false"/>
+
+    <Preference
+        app:key="about"
+        app:title="About"
+        app:iconSpaceReserved="false"/>
+
+    <Preference
+        app:key="sign_out"
+        app:title="Sign out"
+        app:iconSpaceReserved="false"/>
+
+</PreferenceScreen>

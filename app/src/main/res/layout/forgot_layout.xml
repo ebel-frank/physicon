@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="20dp"
+    android:layout_height="wrap_content">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyle"
+        android:visibility="invisible"
+        android:padding="5dp"
+        android:layout_alignBottom="@id/forgotten_email"
+        android:layout_alignTop="@id/forgotten_email"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/forgotTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Please enter your email address to continue."/>
+
+    <EditText
+        android:id="@+id/forgotten_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/prompt_email"
+        android:layout_toStartOf="@id/progressBar"
+        android:layout_below="@id/forgotTextView"
+        android:inputType="textEmailAddress"
+        android:importantForAutofill="no" />
+    <Button
+        android:id="@+id/continueBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:enabled="false"
+        android:layout_below="@+id/forgotten_email"
+        android:background="@drawable/oval_shape"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:text="Continue"/>
+
+</RelativeLayout>

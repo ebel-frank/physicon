@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/st_quiz_bg"
+    android:padding="10dp"
+    tools:context=".ScoreActivity">
+
+    <ImageView
+        android:id="@+id/trophy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/trophy"
+        android:contentDescription="Icon made by Freepik from www.flaticon.com"/>
+
+    <TextView
+        android:id="@+id/congrats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Congratulations!!!"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/trophy"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white"
+        tools:text="An average result, remember you can do better! Practice makes Perfect!"
+        android:layout_below="@id/congrats"
+        android:gravity="center"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="You Scored: "
+        android:textColor="@android:color/white"
+        android:layout_below="@id/remark"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/percentScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        tools:text="50%"
+        android:layout_marginStart="20dp"
+        android:textColor="@android:color/white"
+        android:layout_alignBottom="@id/score"
+        android:layout_toEndOf="@id/score"
+        android:textStyle="bold"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Again"
+        android:onClick="navigate"
+        android:textColor="@android:color/white"
+        android:background="@drawable/oval_shape"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/score"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textColor="@android:color/white"
+        android:background="@drawable/oval_shape"
+        android:onClick="navigate"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/restart"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share"
+        android:onClick="navigate"
+        android:background="@drawable/oval_shape"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/home"
+        android:textSize="30sp"/>
+
+</RelativeLayout>

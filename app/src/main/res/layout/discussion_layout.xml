@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.github.ivbaranov.mli.MaterialLetterIcon
+        android:id="@+id/author_profile_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="15dp"
+        app:mli_letter_color="@android:color/white"
+        app:mli_shape_type="circle"
+        app:mli_initials="false"
+        app:mli_letter_size="20"
+        app:mli_letters_number="2"
+        app:mli_initials_number="2"/>
+
+    <TextView
+        android:id="@+id/author_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="5dp"
+        tools:text="ebel_frank"
+        android:textStyle="italic"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@id/author_profile_image"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="How do we as engineering student get to apply physics in our day to day activities?"
+        android:textSize="20sp"
+        android:layout_toEndOf="@id/author_profile_image"
+        android:layout_below="@id/author_username"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+    <TextView
+        android:id="@+id/user_answered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="0 Answers"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/question"
+        android:layout_toEndOf="@id/author_profile_image"/>
+
+    <TextView
+        android:id="@+id/past_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="51 seconds ago"
+        android:layout_marginTop="15dp"
+        android:layout_alignBottom="@id/user_answered"
+        android:layout_alignParentEnd="true"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/user_answered"
+        android:layout_marginBottom="5dp"
+        android:layout_alignStart="@id/user_answered"
+        android:layout_alignEnd="@id/past_time"
+        android:background="@color/lineColor" />
+</RelativeLayout>

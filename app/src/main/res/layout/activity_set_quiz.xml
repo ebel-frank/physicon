@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/quiz_bg"
+    android:padding="10dp"
+    tools:context=".SetQuiz">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/quiz"
+        android:textSize="60sp"
+        android:gravity="center"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold|italic"/>
+
+    <TextView
+        android:id="@+id/choose_topic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose a topic:"
+        android:textSize="25sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_centerVertical="true"
+        android:textStyle="bold|italic"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/choose_topic"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp">
+        <Button
+            android:id="@+id/sound"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval_shape"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:onClick="start_quiz"
+            android:textAllCaps="false"
+            android:text="@string/sound"/>
+
+        <Button
+            android:id="@+id/elec_field"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval_shape"
+            android:textColor="@android:color/white"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:onClick="start_quiz"
+            android:textAllCaps="false"
+            android:text="@string/elec_field"/>
+
+        <Button
+            android:id="@+id/elec_magnetic"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval_shape"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:onClick="start_quiz"
+            android:textAllCaps="false"
+            android:layout_centerVertical="true"
+            android:text="@string/elec_magnetic"/>
+
+        <Button
+            android:id="@+id/grav_field"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval_shape"
+            android:textColor="@android:color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@id/elec_magnetic"
+            android:textStyle="bold"
+            android:onClick="start_quiz"
+            android:textAllCaps="false"
+            android:text="@string/grav_field"/>
+
+        <Button
+            android:id="@+id/electrolysis"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval_shape"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:onClick="start_quiz"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:text="@string/electrolysis"/>
+
+        <Button
+            android:id="@+id/ac_circuit"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval_shape"
+            android:textColor="@android:color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:textStyle="bold"
+            android:onClick="start_quiz"
+            android:textAllCaps="false"
+            android:text="@string/ac_circuit"/>
+    </RelativeLayout>
+</RelativeLayout>

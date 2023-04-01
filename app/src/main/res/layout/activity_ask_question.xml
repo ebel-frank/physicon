@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="#D7E5E1"
+    tools:context=".AskQuestionActivity"
+    tools:ignore="Overdraw">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp">
+        <com.github.ivbaranov.mli.MaterialLetterIcon
+            android:id="@+id/user_profile_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="20dp"
+            app:mli_letter_color="@android:color/white"
+            app:mli_shape_type="circle"
+            app:mli_initials="false"
+            app:mli_letter_size="26"
+            app:mli_letters_number="2"
+            app:mli_initials_number="2"/>
+
+        <TextView
+            android:id="@+id/user_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="ebel_frank"
+            android:textStyle="italic"
+            android:layout_marginStart="15dp"
+            android:textSize="20sp"
+            android:layout_toEndOf="@id/user_profile_image"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+        <TextView
+            android:id="@+id/num_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/1000"
+            android:textStyle="italic"
+            android:layout_above="@id/user_question"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentEnd="true"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_question"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:gravity="top|start"
+            android:padding="10dp"
+            android:background="@drawable/oval_shape_white"
+            android:textColor="@android:color/black"
+            android:hint="What's your question?"
+            android:maxLength="1000"
+            android:layout_below="@id/user_profile_image"/>
+        <ImageView
+            android:id="@+id/user_imageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignStart="@id/add_photo"
+            android:layout_below="@id/user_question"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/add_photo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/user_question"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_add_image"/>
+    </RelativeLayout>
+
+</ScrollView>
