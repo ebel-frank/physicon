@@ -14,3 +14,7 @@ In addition, the proposed idea is also intended to address the problem of lack o
 2. To enhance confidence to approaching exams among students.
 
 # App Screenshots
+<div>
+  <img src="/screenshot1.png" alt="Physicon splash screen" style="display:inline-block; width:40%;">
+  <img src="/screenshot2.png" alt="Physicon home page" style="display:inline-block; width:40%;">
+</div>
